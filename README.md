@@ -6,7 +6,7 @@
 
 Generate API Keys:
 
-
+![Generate API Keys](images/screenshot1.png "Generate API Keys")
 
 Get configuration information:
 
@@ -85,7 +85,7 @@ network_admin_email_endpoints    = ["flavius.sana@oracle.com"]
 security_admin_email_endpoints   = ["flavius.sana@oracle.com"]
 ```
 
-##Lab 2. Execute Terraform Commands
+## Lab 2. Execute Terraform Commands
 
 
 ### 2.1 Initialize the Repository
@@ -173,7 +173,7 @@ module.lz_groups.oci_identity_group.these["demo1-appdev-admin-group"]: Creation 
 
 Once the apply operation was completed successfully you can start using the landing zone.
 
-
+## Lab 3. Tear-up
 
 ### 3.1 Remove Landing Zone Resources
 
@@ -181,7 +181,13 @@ Using ```terraform destroy``` command, resources created by the landing zone scr
 
 ```
 $ terraform destroy -var-file quickstart-input.tfvars -auto-approve
+...
+module.lz_compartments.oci_identity_compartment.these["demo1-security-cmp"]: Destruction complete after 0s
+module.lz_compartments.oci_identity_compartment.these["demo1-database-cmp"]: Destruction complete after 0s
+
+Destroy complete! Resources: 101 destroyed.
 ```
 
 Note that the compartments are not deleted automatically. Manual cleanup is required for the compartments. 
 
+![Manually delete Compartments](images/screenshot2.png "Delete Compartments")
