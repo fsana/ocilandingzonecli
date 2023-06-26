@@ -1,4 +1,6 @@
-# ocilandingzonecli## Lab 1: Clone the Landing Zone GitHub Repository Locally or in Cloud Shell
+# Configure OCI Secure Landing Zone Using Terraform CLI
+
+## Lab 1: Clone the Landing Zone GitHub Repository Locally or in Cloud Shell
 
 ### 1.1 Configure API Keys
 
